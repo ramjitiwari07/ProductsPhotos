@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.marsphotos
+package com.example.android.productphotos
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

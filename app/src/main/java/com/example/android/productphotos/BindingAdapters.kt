@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.marsphotos
+package com.example.android.productphotos
 
 import android.view.View
 import android.widget.ImageView
@@ -22,9 +22,9 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.android.marsphotos.network.Product
-import com.example.android.marsphotos.overview.MarsApiStatus
-import com.example.android.marsphotos.overview.PhotoGridAdapter
+import com.example.android.productphotos.network.Product
+import com.example.android.productphotos.overview.ProductsApiStatus
+import com.example.android.productphotos.overview.PhotoGridAdapter
 
 /**
  * Updates the data shown in the [RecyclerView].
@@ -50,23 +50,23 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 }
 
 /**
- * This binding adapter displays the [MarsApiStatus] of the network request in an image view.  When
+ * This binding adapter displays the [ProductsApiStatus] of the network request in an image view.  When
  * the request is loading, it displays a loading_animation.  If the request has an error, it
  * displays a broken image to reflect the connection error.  When the request is finished, it
  * hides the image view.
  */
-@BindingAdapter("marsApiStatus")
-fun bindStatus(statusImageView: ImageView, status: MarsApiStatus) {
+@BindingAdapter("productApiStatus")
+fun bindStatus(statusImageView: ImageView, status: ProductsApiStatus) {
     when (status) {
-        MarsApiStatus.LOADING -> {
+        ProductsApiStatus.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        MarsApiStatus.ERROR -> {
+        ProductsApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        MarsApiStatus.DONE -> {
+        ProductsApiStatus.DONE -> {
             statusImageView.visibility = View.GONE
         }
     }

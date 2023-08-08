@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.marsphotos.network
+package com.example.android.productphotos.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -44,9 +44,9 @@ private val retrofit = Retrofit.Builder()
 /**
  * A public interface that exposes the [getPhotos] method
  */
-interface MarsApiService {
+interface ProductsApiService {
     /**
-     * Returns a [List] of [MarsPhoto] and this method can be called from a Coroutine.
+     * Returns a [List] of [ProductPhoto] and this method can be called from a Coroutine.
      * The @GET annotation indicates that the "photos" endpoint will be requested with the GET
      * HTTP method
      */
@@ -57,6 +57,6 @@ interface MarsApiService {
 /**
  * A public Api object that exposes the lazy-initialized Retrofit service
  */
-object MarsApi {
-    val retrofitService: MarsApiService by lazy { retrofit.create(MarsApiService::class.java) }
+object ProductsApi {
+    val retrofitService: ProductsApiService by lazy { retrofit.create(ProductsApiService::class.java) }
 }

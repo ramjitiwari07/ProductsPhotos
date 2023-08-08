@@ -23,13 +23,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.android.marsphotos.overview.OverviewViewModel" />
+            type="com.example.android.productphotos.overview.OverviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.android.marsphotos.overview.OverViewFragment">
+        tools:context="com.example.android.productphotos.overview.OverViewFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photos_grid"
@@ -55,7 +55,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:marsApiStatus="@{viewModel.status}" />
+            app:productApiStatus="@{viewModel.status}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

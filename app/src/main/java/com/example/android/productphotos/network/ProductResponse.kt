@@ -1,4 +1,4 @@
-package com.example.android.marsphotos.network
+package com.example.android.productphotos.network
 
 data class ProductResponse(
     val limit: Int,

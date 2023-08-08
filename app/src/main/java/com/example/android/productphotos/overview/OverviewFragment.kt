@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.marsphotos.overview
+package com.example.android.productphotos.overview
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,10 +22,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.android.marsphotos.databinding.FragmentOverviewBinding
+import com.example.android.productphotos.databinding.FragmentOverviewBinding
 
 /**
- * This fragment shows the the status of the Mars photos web services transaction.
+ * This fragment shows the the status of the Product photos web services transaction.
  */
 class OverviewFragment : Fragment() {
 
